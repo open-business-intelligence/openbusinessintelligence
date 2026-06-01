@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Version>0.1.0</Version>
+    <Authors>openbusinessintelligence.net</Authors>
+    <Company>openbusinessintelligence.net</Company>
+    <PackageProjectUrl>https://github.com/open-business-intelligence/openbi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/open-business-intelligence/openbi</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+</Project>

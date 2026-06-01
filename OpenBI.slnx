@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="OpenBI/OpenBI.csproj" />
+    <Project Path="OpenBI.Interfaces/OpenBI.Interfaces.csproj" />
+    <Project Path="OpenBI.Common/OpenBI.Common.csproj" />
+  </Folder>
+  <Folder Name="/Connectors/">
+    <Project Path="OpenBI.Connectors/OpenBI.Connectors.Interfaces/OpenBI.Connectors.Interfaces.csproj" />
+    <Project Path="OpenBI.Connectors/OpenBI.Connectors.MicrosoftPowerBI/OpenBI.Connectors.PowerBI.csproj" />
+  </Folder>
+  <Folder Name="/Converters/">
+    <Project Path="OpenBI.Converters/OpenBI.Converters.Interfaces/OpenBI.Converters.Interfaces.csproj" />
+    <Project Path="OpenBI.Converters/OpenBI.Converters.PowerBI/OpenBI.Converters.PowerBI.csproj" />
+  </Folder>
+  <Folder Name="/MCP/">
+    <Project Path="OpenBI.MCP.Server/OpenBI.MCP.Server.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/OpenBI.Core.Tests/OpenBI.Core.Tests.csproj" />
+  </Folder>
+</Solution>

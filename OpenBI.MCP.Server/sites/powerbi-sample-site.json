@@ -1,0 +1,10 @@
+{
+  "idSite": "powerbi-sample-site",
+  "siteName": "Power BI Sample Site",
+  "idPlatform": "powerbi",
+  "platformName": "Microsoft Power BI / Fabric",
+  "platformSecretsPath": "secrets/powerbi-interactive.json",
+  "siteConnectionFactoryName": "OpenBI.Connectors.PowerBI.PowerBISiteConnectionFactory, OpenBI.Connectors.PowerBI",
+  "siteConnectionFactoryScope": "Singleton",
+  "siteConverterFactoryName": "OpenBI.Converters.PowerBI.PowerBIOpenBIConverterFactory, OpenBI.Converters.PowerBI"
+}

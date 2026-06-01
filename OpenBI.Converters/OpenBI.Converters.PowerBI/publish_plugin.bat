@@ -1,0 +1,1 @@
+dotnet publish OpenBI.Converters.PowerBI.csproj -c Release -o ../../../OpenBI/OpenBI.MCP.Server/plugins/OpenBI.Converters.PowerBI

@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "MCP": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:7240;https://localhost:7241"
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json"
+}

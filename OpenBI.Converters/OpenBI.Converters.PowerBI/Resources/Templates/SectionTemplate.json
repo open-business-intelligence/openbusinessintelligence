@@ -1,0 +1,12 @@
+{
+  "id": 0,
+  "name": "",
+  "displayName": "",
+  "ordinal": 0,
+  "filters": "[]",
+  "visualContainers": [],
+  "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"185L\"}}}}}]}}",
+  "displayOption": 1,
+  "width": 1280,
+  "height": 720
+}

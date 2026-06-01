@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>OpenBI.Converters.PowerBI</AssemblyName>
+    <RootNamespace>OpenBI.Converters.PowerBI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.AnalysisServices" />
+    <PackageReference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.PowerBI.Api" />
+    <PackageReference Include="Newtonsoft.Json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenBI\OpenBI.csproj" />
+    <ProjectReference Include="..\OpenBI.Converters.Interfaces\OpenBI.Converters.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Templates\DefaultReportLayout.json" />
+    <EmbeddedResource Include="Resources\Templates\DefaultDataflowLayout.json" />
+    <EmbeddedResource Include="Resources\Templates\SectionTemplate.json" />
+    <EmbeddedResource Include="Resources\Templates\VisualContainerTemplate.json" />
+    <EmbeddedResource Include="Resources\Templates\DefaultSemanticModelLayout.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\msSchemas\PbirRoundTripRunner\**\*.cs" />
+    <None Remove="Models\msSchemas\PbirRoundTripRunner\**" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {"name": "PBI_QueryOrder", "value": "[]"},
+      {"name": "__PBI_TimeIntelligenceEnabled", "value": "1"},
+      {"name": "PBIDesktopVersion", "value": "2.130.930.0 (24.06)"},
+      {"name": "PBI_ProTooling", "value": "[\"DevMode\"]"}
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {"Language": "en-US", "Version": "1.0.0"},
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [],
+    "sourceQueryCulture": "en-US",
+    "tables": []
+  }
+}

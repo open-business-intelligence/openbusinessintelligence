@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore OpenBI.slnx
+
+      - name: Build
+        run: dotnet build OpenBI.slnx --no-restore -c Release
+
+      - name: Test
+        run: dotnet test OpenBI.slnx --no-build -c Release --verbosity normal

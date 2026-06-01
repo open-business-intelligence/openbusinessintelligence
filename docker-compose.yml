@@ -1,0 +1,45 @@
+# OpenBI MCP Server — Docker Compose
+#
+# Usage:
+#   docker compose up --build          # build image + start
+#   docker compose up -d               # start detached
+#   docker compose down                # stop and remove containers
+#
+# Configuration directories (relative to this file).
+# These are the same directories dotnet run uses locally, so one set of files
+# works for both local development and docker compose:
+#
+#   OpenBI.MCP.Server/sites/      <- one JSON file per BI site
+#   OpenBI.MCP.Server/secrets/    <- credential files referenced by site JSONs  (git-ignored)
+#   OpenBI.MCP.Server/platforms/  <- platform metadata (info.json, visualtypes.json, …)
+#
+# Secrets note:
+#   secrets/*.json is excluded from git via .gitignore — never commit real credentials.
+#   Copy secrets/*.example.json, rename (drop .example), and fill in your values.
+
+services:
+  openbi-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: openbi-mcp-server
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    volumes:
+      # Site registry — one JSON file per connected BI platform
+      - ./OpenBI.MCP.Server/sites:/app/sites:ro
+      # Credentials — matched by platformSecretsPath in each site JSON
+      - ./OpenBI.MCP.Server/secrets:/app/secrets:ro
+      # Platform metadata — info, visual types, asset type instructions
+      - ./OpenBI.MCP.Server/platforms:/app/platforms:ro
+      # Plugin DLLs — leave empty if no external connectors/converters are needed
+      - ./plugins:/app/plugins:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s

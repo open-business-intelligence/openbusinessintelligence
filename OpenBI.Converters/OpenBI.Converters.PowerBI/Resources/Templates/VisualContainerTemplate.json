@@ -1,0 +1,11 @@
+{
+  "x": 0,
+  "y": 0,
+  "z": 0,
+  "width": 400,
+  "height": 300,
+  "config": "{\"name\":\"\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":400,\"height\":300}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"prototypeQuery\":{\"From\":[],\"OrderBy\":[],\"Select\":[],\"Version\":2},\"projections\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+  "filters": "",
+  "query": "",
+  "dataTransforms": ""
+}

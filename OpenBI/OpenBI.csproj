@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TargetFrameworks>net9.0;net7.0</TargetFrameworks>
+    <Authors>openbusinessintelligence.net</Authors>
+    <Description>OpenBI shared model and types.</Description>
+  </PropertyGroup>
+
+</Project>

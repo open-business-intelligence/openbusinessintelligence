@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OpenBI.MCP.Server</RootNamespace>
+    <AssemblyName>OpenBI.MCP.Server</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBI\OpenBI.csproj" />
+    <ProjectReference Include="..\OpenBI.Interfaces\OpenBI.Interfaces.csproj" />
+    <ProjectReference Include="..\OpenBI.Common\OpenBI.Common.csproj" />
+    <ProjectReference Include="..\OpenBI.Connectors\OpenBI.Connectors.Interfaces\OpenBI.Connectors.Interfaces.csproj" />
+    <ProjectReference Include="..\OpenBI.Converters\OpenBI.Converters.Interfaces\OpenBI.Converters.Interfaces.csproj" />
+    <ProjectReference Include="..\OpenBI.Connectors\OpenBI.Connectors.MicrosoftPowerBI\OpenBI.Connectors.PowerBI.csproj" />
+    <ProjectReference Include="..\OpenBI.Converters\OpenBI.Converters.PowerBI\OpenBI.Converters.PowerBI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="ModelContextProtocol" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Enrichers.Environment" />
+    <PackageReference Include="Serilog.Extensions.Logging" />
+    <PackageReference Include="Serilog.Formatting.Compact" />
+    <PackageReference Include="Serilog.Settings.Configuration" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+  </ItemGroup>
+
+  <!-- Copy runtime assets to output directory -->
+  <ItemGroup>
+    <Content Update="sites\**" CopyToOutputDirectory="PreserveNewest" />
+    <Content Update="secrets\**" CopyToOutputDirectory="PreserveNewest" />
+    <Content Update="platforms\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

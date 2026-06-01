@@ -1,0 +1,19 @@
+# Build outputs — never copy into Docker build context
+**/bin/
+**/obj/
+
+# IDE / OS
+.vs/
+.vscode/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Secrets — mounted as volumes at runtime, never baked into image
+**/secrets/*.json
+!**/secrets/*.example.json
+
+# Logs
+logs/
+*.log

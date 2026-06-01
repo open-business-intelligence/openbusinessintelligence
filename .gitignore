@@ -1,0 +1,27 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Secrets — never commit real credentials
+# Commit only *.example.json files as templates
+**/secrets/*.json
+!**/secrets/*.example.json
+*.local.json
+secrets.local.json
+
+# OS
+.DS_Store
+Thumbs.db

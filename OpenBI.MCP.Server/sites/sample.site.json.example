@@ -1,0 +1,10 @@
+{
+  "idSite": "dev-powerbi-1",
+  "siteName": "Development Power BI",
+  "idPlatform": "powerbi",
+  "platformName": "Microsoft Power BI / Fabric",
+  "platformSecretsPath": "secrets/powerbi-dev.example.json",
+  "siteConnectionFactoryName": "OpenBI.Connectors.PowerBI.PowerBISiteConnectionFactory, OpenBI.Connectors.PowerBI",
+  "siteConnectionFactoryScope": "Singleton",
+  "siteConverterFactoryName": "OpenBI.Converters.PowerBI.PowerBIOpenBIConverterFactory, OpenBI.Converters.PowerBI"
+}

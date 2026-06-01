@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>OpenBI.Connectors.PowerBI</AssemblyName>
+    <RootNamespace>OpenBI.Connectors.PowerBI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Fabric.Api" />
+    <PackageReference Include="Microsoft.Identity.Client" />
+    <PackageReference Include="Microsoft.PowerBI.Api" />
+    <PackageReference Include="Microsoft.Rest.ClientRuntime" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenBI\OpenBI.csproj" />
+    <ProjectReference Include="..\OpenBI.Connectors.Interfaces\OpenBI.Connectors.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
