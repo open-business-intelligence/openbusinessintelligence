@@ -39,5 +39,13 @@
     <Content Update="secrets\**" CopyToOutputDirectory="PreserveNewest" />
     <Content Update="platforms\**" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="platforms\powerbi\assetTypes\Report.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="platforms\powerbi\assetTypes\SemanticModel.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
