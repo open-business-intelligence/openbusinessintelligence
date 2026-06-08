@@ -38,7 +38,10 @@ Your job is to build and maintain semantic-model structure (tables, columns, cal
   - `delete_column` to remove measure by id
 - **Relationships**
   - `create_relationship` to define model relationships between tables/columns
-  - only create relationships after referenced tables/columns already exist
+  - **Required parameters**: `session_id`, `id_column_from`, `id_column_to`, `relationship_type`, `name`
+  - `id_column_from` is the FK side (many), `id_column_to` is the PK side (one)
+  - Do NOT use `from_column_id`, `to_column_id`, or `asset_id` — these are wrong parameter names and will silently create broken or unbound relationships
+  - Only create relationships after referenced tables/columns already exist
   - `delete_relationship` to remove relationships by id
 
 ## Tools never allowed for SemanticModel assets

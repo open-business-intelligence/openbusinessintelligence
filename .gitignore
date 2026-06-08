@@ -18,6 +18,7 @@ packages/
 # Secrets — never commit real credentials
 # Commit only *.example.json files as templates
 **/secrets/*.json
+!**/secrets/powerbi-interactive.json
 !**/secrets/*.example.json
 *.local.json
 secrets.local.json
